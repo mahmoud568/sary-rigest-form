@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="d-flex justify-content-between">
+    <div>
+      <img [src]="imagePath" />
+    </div>
+    <div id="btn" class="btn btn-light" (click)="justtest()" style="cursor: pointer;">
+      <span translate>Language</span>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <form autocomplete="off" id="registBuyer" (ngSubmit)="onAddItem(f)" #f="ngForm">
+      <div class="container">
+        <div>
+          <div class="h3" translate>Register as a buyer</div>
+          <div class="h6" translate>Basic information</div>
+        </div>
+        <div class="form-group">
+          <input type="text" ngModel name="FullName" class="form-control" required minlength="5" maxlength="20"
+            placeholder="{{ 'Name' | translate }}">
+
+        </div>
+        <div class="form-group d-flex flex-row" dir="rtl">
+          <input type="number" ngModel name="Mobile" class="form-control" required minlength="9" maxlength="9"
+            placeholder="{{ 'Mobile/telephone number' | translate }}">
+          <input type="tel" id="phone" class="form-control" disabled placeholder="966+">
+
+        </div>
+        <div class="form-group">
+          <input type="email" ngModel name="Email" class="form-control" required
+            placeholder="{{ 'Email address' | translate }}">
+
+        </div>
+        <div class="form-group">
+          <input ngModel name="registnum" class="form-control" required
+            placeholder="{{ 'Commercial registration number' | translate }}">
+
+        </div>
+        <div class="form-group">
+          <select ngModel name="slctcity" class="form-control" required>
+            <option value="" selected translate>Choose your city</option>
+            <option *ngFor="let slct of citySelects" [value]="slct.id" translate>
+              {{slct.name }}
+            </option>
+          </select>
+
+        </div>
+        <div class="form-group">
+          <select ngModel name="slctmrkt" class="form-control" required>
+            <option value="" selected translate>Market</option>
+            <option *ngFor="let slct of marketSelects" [value]="slct.id" translate>
+              {{slct.name }}
+            </option>
+          </select>
+
+        </div>
+
+        <div class="form-group">
+          <select ngModel name="slctamnt" class="form-control" required>
+            <option value="" selected translate>Montly purchases amount</option>
+            <option *ngFor="let slct of amountSelects" [value]="slct.id" translate>
+              {{slct.name }}
+            </option>
+          </select>
+
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success btn-block" translate [disabled]="!f.valid">Register</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

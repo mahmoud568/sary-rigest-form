@@ -1,0 +1,126 @@
+.container {
+  padding: 30px;
+}
+#btn {
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+  height: 45px;
+  width: 45px;
+
+  border-radius: 100%;
+  background-color: #5c74bc;
+  border-radius: #687ec0;
+}
+#btn:hover {
+  color: black;
+  background-color: white;
+}
+
+#btn span {
+  margin-top: 0%;
+  margin-left: 0%;
+}
+
+/* form */
+
+form {
+  height: 780px;
+  width: 450px;
+  background-image: url("https://www.sary.com/assets/images/sign-up-form-background.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: white;
+  border-radius: 50px;
+  border: 1px solid rgb(0, 0, 0, 0.05);
+}
+
+.container .h3 {
+  font-size: 30px;
+  font-weight: bolder;
+}
+.container .h6 {
+  font-size: 20px;
+}
+
+input,
+select {
+  background: none;
+  color: rgb(0, 0, 0, 0.3);
+  font-weight: bold;
+  height: 50px;
+  border-radius: 50px;
+  padding-left: 20px;
+}
+
+.form-control.ng-touched.ng-invalid {
+  border: 2px solid red;
+}
+
+::placeholder {
+  color: rgb(0, 0, 0, 0.3);
+}
+
+button {
+  margin-top: 10%;
+  background-color: #31d2a0;
+  border-radius: 50px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.form-group {
+  padding-top: 3%;
+}
+
+select {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/MediaWiki_Vector_skin_action_arrow.svg/1200px-MediaWiki_Vector_skin_action_arrow.svg.png)
+    no-repeat;
+  background-size: 20px 20px;
+  background-position: 5% 50%;
+  -webkit-appearance: none;
+}
+
+.en select {
+  background-position: 95% 50%;
+}
+
+#phone {
+  background: url(https://www.sary.com/assets/images/saudi-arabia.svg) no-repeat;
+  background-size: 25%;
+  background-position: 20% 50%;
+  width: 30%;
+}
+/* Responsive Styles */
+
+@media only screen and (max-width: 600px) {
+  form {
+    height: 600px;
+    width: 400px;
+  }
+
+  .container .h3 {
+    font-size: 22px;
+  }
+  .container .h6 {
+    font-size: 15px;
+  }
+  ::placeholder {
+    font-size: 13px;
+  }
+  input,
+  select {
+    font-weight: bold;
+    height: 40px;
+    border-radius: 50px;
+    padding-left: 20px;
+  }
+  select {
+    font-size: 13px;
+  }
+
+  .form-group {
+    padding-top: 0;
+  }
+}
