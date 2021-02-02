@@ -1,7 +1,9 @@
   
 {
     "Language": "en",
-    
+   "formError" : "غير صالح!", 
+
+
    "Register as a buyer": "سجّل كمشتري",
    "Basic information": "معلومات أساسية",
    "Name": "الاسم",

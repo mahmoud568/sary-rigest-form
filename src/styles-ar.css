@@ -1,3 +1,7 @@
 * {
   text-align: right;
 }
+
+.errorspan {
+  padding-right: 20px;
+}

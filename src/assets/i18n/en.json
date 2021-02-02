@@ -1,6 +1,7 @@
   
 {
    "Language": "ع",
+   "formError" : "this column is not valid!", 
    
    "Register as a buyer": "Register as a buyer",
 "Basic information": "Basic information",

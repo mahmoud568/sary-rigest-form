@@ -5,3 +5,12 @@
 #phone {
   padding-left: 12%;
 }
+
+#errorspan {
+  direction: ltr;
+  padding-right: 130px;
+}
+
+.errorspan {
+  padding-left: 20px;
+}

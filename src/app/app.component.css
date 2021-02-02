@@ -92,6 +92,17 @@ select {
   background-position: 20% 50%;
   width: 30%;
 }
+
+/* pupup error */
+.errorspan {
+  position: absolute;
+  color: red;
+}
+
+#errorspan {
+  padding-top: 50px;
+}
+
 /* Responsive Styles */
 
 @media only screen and (max-width: 600px) {

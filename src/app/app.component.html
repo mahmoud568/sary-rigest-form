@@ -16,52 +16,57 @@
           <div class="h6" translate>Basic information</div>
         </div>
         <div class="form-group">
-          <input type="text" ngModel name="FullName" class="form-control" required minlength="5" maxlength="20"
-            placeholder="{{ 'Name' | translate }}">
-
+          <input type="text" ngModel name="FullName" #FullName="ngModel" class="form-control" required minlength="5"
+            maxlength="20" placeholder="{{ 'Name' | translate }}">
+          <span class="errorspan" *ngIf="!FullName.valid && FullName.touched" translate="">formError</span>
         </div>
         <div class="form-group d-flex flex-row" dir="rtl">
-          <input type="number" ngModel name="Mobile" class="form-control" required minlength="9" maxlength="9"
-            placeholder="{{ 'Mobile/telephone number' | translate }}">
+          <input type="number" ngModel name="Mobile" #Mobile="ngModel" class="form-control" required minlength="9"
+            maxlength="9" placeholder="{{ 'Mobile/telephone number' | translate }}">
           <input type="tel" id="phone" class="form-control" disabled placeholder="966+">
-
+          <span class="errorspan" id="errorspan" *ngIf="!Mobile.valid && Mobile.touched" translate="">formError</span>
         </div>
         <div class="form-group">
-          <input type="email" ngModel name="Email" class="form-control" required
+          <input type="email" ngModel name="Email" #Email="ngModel" class="form-control" required
             placeholder="{{ 'Email address' | translate }}">
+          <span class="errorspan" *ngIf="!Email.valid && Email.touched" translate="">formError</span>
 
         </div>
         <div class="form-group">
-          <input ngModel name="registnum" class="form-control" required
+          <input ngModel name="registnum" #registnum="ngModel" class="form-control" required
             placeholder="{{ 'Commercial registration number' | translate }}">
+          <span class="errorspan" *ngIf="!registnum.valid && registnum.touched" translate="">formError</span>
 
         </div>
         <div class="form-group">
-          <select ngModel name="slctcity" class="form-control" required>
+          <select ngModel name="slctcity" #slctcity="ngModel" class="form-control" required>
             <option value="" selected translate>Choose your city</option>
             <option *ngFor="let slct of citySelects" [value]="slct.id" translate>
               {{slct.name }}
             </option>
           </select>
+          <span class="errorspan" *ngIf="!slctcity.valid && slctcity.touched" translate="">formError</span>
 
         </div>
         <div class="form-group">
-          <select ngModel name="slctmrkt" class="form-control" required>
+          <select ngModel name="slctmrkt" #slctmrkt="ngModel" class="form-control" required>
             <option value="" selected translate>Market</option>
             <option *ngFor="let slct of marketSelects" [value]="slct.id" translate>
               {{slct.name }}
             </option>
           </select>
+          <span class="errorspan" *ngIf="!slctmrkt.valid && slctmrkt.touched" translate="">formError</span>
 
         </div>
 
         <div class="form-group">
-          <select ngModel name="slctamnt" class="form-control" required>
+          <select ngModel name="slctamnt" #slctamnt="ngModel" class="form-control" required>
             <option value="" selected translate>Montly purchases amount</option>
             <option *ngFor="let slct of amountSelects" [value]="slct.id" translate>
               {{slct.name }}
             </option>
           </select>
+          <span class="errorspan" *ngIf="!slctamnt.valid && slctamnt.touched" translate="">formError</span>
 
         </div>
         <div class="form-group">
